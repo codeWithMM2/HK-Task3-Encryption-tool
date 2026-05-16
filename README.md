@@ -58,3 +58,9 @@ The application runs inside an interactive infinite loop (`while True`) providin
 Open your terminal inside the source folder and execute:
 ```bash
 python encryption tool.py
+---
+
+## 📹 6. Project Demo Video
+The complete 1 minute application walkthrough video has been uploaded directly to this repository. It demonstrates the live terminal interface execution, 4-layer cryptographic encoding, JSON metadata logging, and robustness of the error-handling validations.
+Please open Task 3 ENCRYPTION TOOL DEMO VIDEO.mp4
+to watch...
