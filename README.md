@@ -38,6 +38,21 @@ To elevate data accountability, this application exports encrypted payloads usin
 The engineering pipeline relies entirely upon **Python 3.x Standard Built-in Libraries** (`os`, `json`, `hashlib`, `base64`, `datetime`). 
 * No external third-party `pip` installations are required.
 * Fully cross-platform compliant (Windows, Linux, macOS compatible).
+  ### 💻 Application Interface & UI Navigation Workflow
+The application runs inside an interactive infinite loop (`while True`) providing the following CLI menu options:
+
+1. **Option 1: Encrypt Data**
+   * Prompts for a plaintext string.
+   * Requests a secret password and enforces a strict double-check confirmation loop. If inputs mismatch or remain empty, a descriptive `ValueError` handles the intercept smoothly without crashing.
+2. **Option 2: Decrypt Data**
+   * Prompts for the raw encrypted ciphertext string.
+   * Requests the single password/key and automatically applies the reverse mathematical matrix layers (Layer 4 down to Layer 1) to restore the original plaintext.
+3. **Option 3: Save Encrypted Data to File**
+   * Exports the encrypted payload string, dynamic password hints, and precise system-clock execution timestamps into a structured `.json` format safely.
+4. **Option 4: Load & Decrypt from File**
+   * Requests the target filename and verifies its path dynamically via OS modules. If the file is not located, a clean `FileNotFoundError` intercepts exceptions elegantly. Parses valid JSON metadata and prompts for the key to decrypt.
+5. **Option 5: Exit**
+   * Gracefully breaks the execution loop and terminates the system environment securely.
 
 ### 🚀 Execution Command
 Open your terminal inside the source folder and execute:
